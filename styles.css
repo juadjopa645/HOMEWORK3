@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.page-grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto 1fr 70px;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+
+.header {
+  grid-area: header;
+  padding: 16px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 16px;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.main {
+  grid-area: main;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.footer {
+  grid-area: footer;
+  border-top: 1px solid #ddd;
+  padding: 12px 20px;
+  position: relative;
+}
+
+.section {
+  margin-bottom: 28px;
+}
+
+.nav-title {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: #222;
+}
+
+.nav-link:hover {
+  background: #f3f3f3;
+}
+
+.resume-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 12px;
+  background: #111;
+  color: white;
+  font-weight: bold;
+}
+
+.resume-btn:hover {
+  background: #333;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.info-table th,
+.info-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.info-table thead th {
+  background: #f0f0f0;
+  font-weight: bold;
+}
+
+#summary p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#summary h2,
+#education h2,
+#experience h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+#education,
+#experience {
+  background-color: #e6e6e6;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #bdbdbd;
+}
+
+.skills-wrap {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  padding: 10px 14px;
+  border: 2px solid #999;
+  border-radius: 999px;
+  background: white;
+  font-weight: bold;
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  border: 2px solid #bbb;
+  border-radius: 12px;
+  padding: 16px;
+  background: white;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
+
+.contact-box {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  text-align: right;
+}
+.project-card {
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.12),
+    0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
